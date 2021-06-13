@@ -111,10 +111,12 @@ var transactions = [
 
   var uniqueVendors = []
 
-  transactions.map(function(transaction){
-      if (transaction.vendor == true){
-          uniqueVendors.push(transaction.vendor)
+  transactions.forEach(function(transaction){
+    transaction.map(function(element){
+      if (element.vendor == true){
+          uniqueVendors.push(element.vendor)
       }
+      return uniqueVendors
   });
 
   console.log(uniqueVendors)
