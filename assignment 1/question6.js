@@ -111,10 +111,14 @@ var transactions = [
 
   var individualCustomers = []
 
-  transactions.map(function(transaction){
+  let great = transactions.map(function(transaction){
       if (transaction.customer){
-          individualCustomers.push(transaction.customer)
-      }
-  });
+          return transaction.customer
+      }).filter(function(e){
+        if (transaction.customer){
+          return null
+        }
+      });
+  
 
-  console.log(individualCustomers)
+  console.log(great)
