@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, ;
+}
+
+.container {
+    box-sizing: border-box;
+    height: auto;
+    width: 500px;
+    border: 1px red solid;
+    font-size: 24px;
+    margin:auto;
+}
+
+.scrollRibbon {
+    position: fixed;
+    top: 0;
+    width: 0%;
+    background-color: tomato;
+}
