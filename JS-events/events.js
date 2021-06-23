@@ -8,13 +8,14 @@ document.addEventListener('DOMContentLoaded',(e)=>{
 
 });
 
-const CalculateScrollPercent = (docE) => {
-    const {scrollTop, scrollHeight, clientHeight} = docE;
-    console.log(scrollTop, scrollHeight, clientHeight);
-    return 100;
+const calculateScrollPercent = (docE) => {
+    let scrollTop = docE.scrollTop
+    let scrollHeight = docE.scrollHeight;
+    let clientHeight = docE.clientHeight;
+    return (((scrollTop)/(scrollHeight-clientHeight)) * 100);
 };
-
 document.addEventListener('scroll', (e)=> {
-    console.log(e.target.documentElement.scrollTop);
+    let ribbon = document.querySelector('.scrollRibbon');
+    ribbon.style.width = `${calculateScrollPercent(e.target.documentElement)}%`;
 });
 
